@@ -6,12 +6,12 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.graphics.Color;
 import android.provider.Settings;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.core.app.NotificationCompat;
 
 import java.util.Calendar;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 
 public class NotificationHelper
 {

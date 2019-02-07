@@ -1,14 +1,10 @@
 package mg.startapps.namana.tasks;
 
-import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
-
-import java.lang.ref.WeakReference;
 
 import mg.startapps.namana.helpers.StringHelper;
 

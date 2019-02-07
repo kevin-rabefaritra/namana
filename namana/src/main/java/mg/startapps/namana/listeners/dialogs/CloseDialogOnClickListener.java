@@ -1,8 +1,9 @@
 package mg.startapps.namana.listeners.dialogs;
 
 import android.app.Dialog;
-import androidx.fragment.app.DialogFragment;
 import android.view.View;
+
+import androidx.fragment.app.DialogFragment;
 
 /**
  * Created by Kevin Rabefaritra on 18/02/2018.
