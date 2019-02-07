@@ -6,7 +6,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.AnimRes;
+import androidx.annotation.AnimRes;
 import android.util.Log;
 
 public class ActivityHelper
