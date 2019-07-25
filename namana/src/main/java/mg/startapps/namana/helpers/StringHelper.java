@@ -67,4 +67,8 @@ public class StringHelper
 			return String.format("%s...", string.substring(0, maxLength - 1));
 		}
 	}
+
+	public static String[] explode(String str, String delimiter) {
+		return str.split(delimiter);
+	}
 }
