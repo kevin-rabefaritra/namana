@@ -30,7 +30,7 @@ public class StringHelper
 	 */
 	public static boolean isEmptyOrNull(String str)
 	{
-		return (str == null || str.equals("") || str.toLowerCase().equals("null"));
+		return (str == null || str.trim().equals("") || str.trim().toLowerCase().equals("null"));
 	}
 
 	/**
@@ -70,5 +70,21 @@ public class StringHelper
 
 	public static String[] explode(String str, String delimiter) {
 		return str.split(delimiter);
+	}
+
+	public static String repeat(String str, int repeat) {
+		String result = str;
+		for (int i = 1; i < repeat; i++) {
+			result += str;
+		}
+		return result;
+	}
+
+	public static String join(String delimiter, String... strings) {
+		String result = "";
+		for(String string: strings) {
+			result += string + delimiter;
+		}
+		return result.substring(0, result.length() - 1);
 	}
 }
