@@ -151,4 +151,16 @@ public class ActivityHelper
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		activity.startActivity(intent);
 	}
+
+	public static void stopService(Context context, Class<? extends Service> serviceClass)
+	{
+		Intent intent = new Intent(context, serviceClass);
+		context.stopService(intent);
+	}
+
+	public static void restartService(Context context, Class<? extends Service> serviceClass)
+	{
+		ActivityHelper.stopService(context, serviceClass);
+		ActivityHelper.launchService(context, serviceClass);
+	}
 }
