@@ -9,8 +9,8 @@ import mg.startapps.namana.helpers.ActivityHelper;
 /**
  * Created by kevinRabefaritra on 28/12/16.
  */
-public class OpenActivityOnClickListener implements View.OnClickListener, DialogInterface.OnClickListener
-{
+public class OpenActivityOnClickListener implements View.OnClickListener, DialogInterface.OnClickListener {
+
     private Activity activity;
     private Class<? extends Activity> activityClass;
     private String[] keys;
@@ -18,8 +18,7 @@ public class OpenActivityOnClickListener implements View.OnClickListener, Dialog
     private boolean closeAfter;
 	private boolean fadingEffect;
 
-    public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String[] keys, Object[] values, boolean closeAfter, boolean fadingEffect)
-    {
+    public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String[] keys, Object[] values, boolean closeAfter, boolean fadingEffect) {
         super();
         this.activity = activity;
         this.activityClass = activityClass;
@@ -29,53 +28,43 @@ public class OpenActivityOnClickListener implements View.OnClickListener, Dialog
 		this.fadingEffect = fadingEffect;
     }
 
-	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String[] keys, Object[] values)
-	{
+	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String[] keys, Object[] values) {
 		this(activity, activityClass, keys, values, false, false);
 	}
 
-	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String key, Object value)
-	{
+	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, String key, Object value) {
 		this(activity, activityClass, new String[]{key}, new Object[]{value});
 	}
 
-	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, boolean closeAfter, boolean fadingEffect)
-	{
+	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, boolean closeAfter, boolean fadingEffect) {
 		this(activity, activityClass, null, null, closeAfter, fadingEffect);
 	}
 
-	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, boolean closeAfter)
-	{
+	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass, boolean closeAfter) {
 		this(activity, activityClass, null, null, closeAfter, false);
 	}
 
-	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass)
-	{
+	public OpenActivityOnClickListener(Activity activity, Class<? extends Activity> activityClass) {
 		this(activity, activityClass, false);
 	}
 
-    private void launchActivity()
-    {
+    private void launchActivity() {
         ActivityHelper.launchActivity(this.activity, this.activityClass, this.keys, this.values);
-		if(this.fadingEffect)
-		{
+		if(this.fadingEffect) {
 			this.activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 		}
-		if(this.closeAfter)
-		{
+		if(this.closeAfter) {
 			this.activity.finish();
 		}
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         this.launchActivity();
     }
 
 	@Override
-	public void onClick(DialogInterface dialogInterface, int i)
-	{
+	public void onClick(DialogInterface dialogInterface, int i) {
 		this.launchActivity();
 	}
 }
