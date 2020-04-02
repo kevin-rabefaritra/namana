@@ -1,6 +1,7 @@
 package mg.startapps.namana.listeners.activities;
 
 import android.app.Activity;
+import android.util.Patterns;
 import android.view.View;
 
 import mg.startapps.namana.helpers.ActivityHelper;
@@ -31,6 +32,9 @@ public class OpenUrlOnClickListener implements View.OnClickListener
 	@Override
 	public void onClick(View v)
 	{
-		ActivityHelper.openURL(this.activity, this.url, this.securedUrl);
+		if(Patterns.WEB_URL.matcher(this.url).matches())
+		{
+			ActivityHelper.openURL(this.activity, this.url, this.securedUrl);
+		}
 	}
 }

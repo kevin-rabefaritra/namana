@@ -133,4 +133,14 @@ public class Time
 	{
 		return String.format("%s:%s:%s", StringHelper.fillZeros(this.hour, 2), StringHelper.fillZeros(this.minutes, 2), StringHelper.fillZeros(this.seconds, 2));
 	}
+
+	/**
+	 * Returns the amount of minutes of difference between two Time
+	 * @param time2
+	 * @return the difference in minutes
+	 */
+	public int minutesDifference(Time time2)
+	{
+		return this.toMinutes() - time2.toMinutes();
+	}
 }

@@ -13,12 +13,9 @@ import androidx.core.content.ContextCompat;
 
 public class PermissionsHelper
 {
-	public static boolean hasPermissions(Context context, String... permissions)
-	{
-		for(String permission : permissions)
-		{
-			if(ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_DENIED)
-			{
+	public static boolean hasPermissions(Context context, String... permissions) {
+		for(String permission : permissions) {
+			if(ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_DENIED) {
 				return false;
 			}
 		}

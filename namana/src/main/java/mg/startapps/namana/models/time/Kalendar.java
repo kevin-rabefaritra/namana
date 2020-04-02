@@ -307,19 +307,10 @@ public final class Kalendar
 	}
 
 	/**
-	 * Retourne sous la forme dd-mm-YYYY
-	 * @return String
-	 */
-	public String toNumericString()
-	{
-		return String.format("%s-%s-%s", StringHelper.fillZeros(this.day, 2), StringHelper.fillZeros(this.month, 2), this.year);
-	}
-
-	/**
 	 * Retourne sous la forme YYYY-mm-dd
 	 * @return String
 	 */
-	public String toEngNumericString()
+	public String toNumericString()
 	{
 		return String.format("%s-%s-%s", this.year, StringHelper.fillZeros(this.month, 2), StringHelper.fillZeros(this.day, 2));
 	}
