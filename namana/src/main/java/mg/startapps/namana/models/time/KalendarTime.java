@@ -73,12 +73,12 @@ public class KalendarTime
 
 	public String toDateTimeString()
 	{
-		return String.format("%s %s", this.kalendar.toEngNumericString(), this.time.toString());
+		return String.format("%s %s", this.kalendar.toNumericString(), this.time.toString());
 	}
 
 	public String toTimestamp()
 	{
-		return String.format("%s %s", this.kalendar.toEngNumericString(), this.time.toLongString());
+		return String.format("%s %s", this.kalendar.toNumericString(), this.time.toLongString());
 	}
 
 	public int compareTo(KalendarTime kalendarTime)
