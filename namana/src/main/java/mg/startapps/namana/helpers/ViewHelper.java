@@ -3,6 +3,7 @@ package mg.startapps.namana.helpers;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.View;
@@ -17,12 +18,6 @@ import androidx.annotation.Px;
 
 public class ViewHelper
 {
-	public static void setFontStyleToTextView(Context context, TextView textView, String font)
-	{
-		Typeface typeFace = Typeface.createFromAsset(context.getAssets(), "fonts/" + font + "");
-		textView.setTypeface(typeFace);
-	}
-
 	public static View getBlankView(@NonNull Activity activity, @Px int width)
 	{
 		TextView view = new TextView(activity);
