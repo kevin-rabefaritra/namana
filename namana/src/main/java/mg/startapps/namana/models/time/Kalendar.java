@@ -326,6 +326,7 @@ public final class Kalendar
 
 	private static int getLastJourMois(int mois, int annee)
 	{
+		mois = mois < 1 ? mois + 12: mois % 13;
 		int[] joursMois = new int[]{31, annee%4 == 0? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		return joursMois[mois - 1];
 	}
