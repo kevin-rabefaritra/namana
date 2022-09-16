@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Namana.iml" filepath="$PROJECT_DIR$/Namana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Namana.iml" filepath="$PROJECT_DIR$/.idea/modules/Namana.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Namana.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Namana.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/namana/Namana.namana.iml" filepath="$PROJECT_DIR$/.idea/modules/namana/Namana.namana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Namana.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Namana.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Namana.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Namana.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Namana.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Namana.app.unitTest.iml" />
     </modules>
   </component>
 </project>
